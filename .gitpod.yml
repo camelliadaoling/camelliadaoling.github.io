@@ -1,0 +1,21 @@
+tasks:
+  - name: Dev Server
+    init: bundle
+    command: bundle exec jekyll serve --livereload
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - esbenp.prettier-vscode
+    - TabNine.tabnine-vscode
+    - coenraads.bracket-pair-colorizer
+    - aaron-bond.better-comments
+    - pkief.material-icon-theme
+    - dbaeumer.vscode-eslint
+    - yzhang.markdown-all-in-one
+    - davidanson.vscode-markdownlint
+    - mrmlnc.vscode-scss
+    - equinusocio.vsc-material-theme
+    - github.vscode-pull-request-github
+ports:
+  - port: 4000
+    onOpen: open-browser
