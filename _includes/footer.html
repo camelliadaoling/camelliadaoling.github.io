@@ -2,16 +2,12 @@
 <footer class="footer py-4 js-page-footer">
   <div class="main grid">
 
-    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-    {%- assign _locale_copyright_dates = __return -%}
     <div class="site-info cell cell--4 pl-3 pr-3">
       <p class="text-l">Built on stolen Caeté land.</p>
       <p class="text-l"><a href="https://native-land.ca">Whose land do you occupy?</a></p>
       <p class="text-sm"><em>All content is a crystallization of Camellia Dao-Ling and their ancestors’ qi. All rights reserved.</em></p>
       <div>
-        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-        {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }},
+        © {{ site.title }} {{ site.time | date: '%Y' }},
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
