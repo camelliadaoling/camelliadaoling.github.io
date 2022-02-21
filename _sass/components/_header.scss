@@ -3,52 +3,68 @@
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
-    @include link-colors($header-text-color, $main-color-1);
   }
   .main {
     @include flexbox();
-    @include media-breakpoint-down(md) {
-      @include flex-direction(column);
+    @include align-items(center);
+    @include flex-direction(column);
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+    .main_menu {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+      @include media-breakpoint-down(md) {
+        @include flex-direction(column);
+      }
+      @include media-breakpoint-up(sm) {
+        margin-top: -2rem;
+      }
+      width: 100%;
     }
   }
 }
 
 .header--dark {
   @extend .text--dark;
-  background: rgba(#000, .15);
+  background: rgba(#000, 0.15);
   .navigation__item--active {
-    &::after {
-      @include split-line(bottom, 4px, $text-color-theme-dark);
+    a {
+      @include link-colors(darken($text-color-1, 20%), darken($text-color-1, 20%));
+      @include split-line(bottom, 2px, darken($text-color-1, 20%));
     }
   }
 }
 
 .header--light {
   @extend .text--light;
-  background: rgba(#fff, .15);
+  background: rgba(#fff, 0.15);
   .navigation__item--active {
-    &::after {
-      @include split-line(bottom, 4px, $text-color-theme-light);
+    a {
+      @include link-colors(lighten($text-color-1, 20%), lighten($text-color-1, 20%));
+      @include split-line(bottom, 2px, darken($text-color-1, 20%));
     }
   }
 }
 
 .header__title {
-  @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
-  height: map-get($layout, header-height);
-  margin-right: map-get($spacers, 3);
+  height: auto;
+  margin-bottom: map-get($spacers, 3);
   white-space: nowrap;
-  @include media-breakpoint-down(md) {
-    height: auto;
-    margin-right: 0;
-  }
   & > .header__brand {
     @include flex(1);
     @include media-breakpoint-down(md) {
       height: map-get($layout, header-height-sm);
+    }
+    a {
+      font-size: calc((2 - 1) * 1.2vw + 1rem);
+      font-weight: bold;
     }
   }
   & > .search-button {
@@ -82,21 +98,28 @@
   }
 }
 
+.social {
+  @include media-breakpoint-up(sm) {
+    margin-right: 2rem;
+  }
+}
+
 .navigation {
   @include overflow(auto, "x");
   & > ul {
-    height: map-get($layout, header-height);
+    height: auto;
     padding-bottom: 0;
     margin: 0;
     @include media-breakpoint-down(md) {
       padding-bottom: 4px;
       margin: -4px 0 0 0;
     }
-    @include menu(3, 2, nowrap);
-    @include align-items(center);
-    @include media-breakpoint-down(md) {
-      height: auto;
+    @include media-breakpoint-up(sm) {
+      margin-top: 2rem;
     }
+    @include menu(0, 0, wrap);
+    @include align-items(center);
+    @include justify-content(center);
     .search-button {
       @include media-breakpoint-down(md) {
         display: none;
@@ -106,18 +129,15 @@
 }
 
 .navigation__item {
-  &::after {
-    display: block;
-    margin-bottom: -4px;
-    content: "";
-    @include split-line(bottom, 4px, transparent);
+  margin-left: 0.9vw !important;
+  margin-right: 0.9vw !important;
+  a {
+    font-size: calc((1.2 - 1) * 1.2vw + 1rem);
   }
 }
-.navigation__item--active {
-  a {
-    @include link-colors($main-color-1, $main-color-1);
-  }
-  &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+
+.connect {
+  @include media-breakpoint-up(sm) {
+    margin-left: 2rem;
   }
 }

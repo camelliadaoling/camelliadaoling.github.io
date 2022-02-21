@@ -9,8 +9,6 @@
 *.log
 *.log.*
 
-/.vscode/
-
 node_modules/
 .sass-cache/
 

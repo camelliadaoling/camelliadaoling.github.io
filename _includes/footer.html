@@ -1,6 +1,21 @@
 
 <footer class="footer py-4 js-page-footer">
-  <div class="main">
+  <div class="main grid">
+
+    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+    {%- assign _locale_copyright_dates = __return -%}
+    <div class="site-info cell cell--4 pl-3 pr-3">
+      <p class="text-l">Built on stolen Caeté land.</p>
+      <p class="text-l"><a href="https://native-land.ca">Whose land do you occupy?</a></p>
+      <p class="text-sm"><em>All content is a crystallization of Camellia Dao-Ling and their ancestors’ qi. All rights reserved.</em></p>
+      <div>
+        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+        {%- assign _locale_copyright_dates = __return -%}
+        © {{ site.title }} {{ _locale_copyright_dates }},
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
+    </div>
 
     {%- assign _site_author = site.author -%}
     {%- if _site_author.type == 'organization' -%}
@@ -9,7 +24,9 @@
       {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
 
-    <div itemscope itemtype="{{ _site_author_itemtype }}">
+    <div class="cell cell--4 pl-3 pr-3" itemscope itemtype="{{ _site_author_itemtype }}">
+      <p class="text-l">Questions?</p>
+      <p><a href="/contact">Reach out</a>. Give anonymous feedback <a href="/feedback">here</a>.﻿</p>
       <meta itemprop="name" content="{{ _site_author.name }}">
       {%- assign _site_author_url = _site_author.url | default: '/'-%}
       {%- include snippets/get-nav-url.html path=_site_author_url -%}
@@ -22,16 +39,17 @@
         {%- include author-links.html author=_site_author -%}
       </div>
     </div>
-    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-    {%- assign _locale_copyright_dates = __return -%}
-    <div class="site-info mt-2">
-      <div>
-        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-        {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }},
-        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </div>
+
+    <div class="cell cell--2 pl-3 pr-3">
+      <p class="text-s"><a href="/services">Services</a></p>
+      <p class="text-s"><a href="/marketplace">Marketplace</a></p>
+    </div>
+
+    <div class="cell cell--2 pl-3 pr-3">
+      <p class="text-s"><a href="https://www.patreon.com/wholesoul">Patreon</a></p>
+      <p class="text-s"><a href="/about">Positionality</a></p>
+      <p class="text-s"><a href="https://www.patreon.com/posts/57639858">Intellectual lineage</a></p>
+      <p class="text-s"><a href="/testimonials">Testimonials</a></p>
     </div>
   </div>
 </footer>

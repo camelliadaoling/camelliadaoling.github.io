@@ -1,0 +1,180 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "tslint.enable": false,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.renderWhitespace": "all",
+  "git.autofetch": true,
+  "editor.autoIndent": "full",
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorStyle": "line",
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Cascadia Code PL",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": false,
+  "editor.letterSpacing": 0.5,
+  "editor.lineHeight": 25,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "prettier.printWidth": 120,
+  "prettier.bracketSpacing": true,
+  "prettier.singleQuote": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "files.autoSave": "onFocusChange",
+  "files.hotExit": "onExit",
+  "files.defaultLanguage": "",
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.localEchoStyle": "dim",
+  "terminal.integrated.localEchoLatencyThreshold": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "emphasis",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "strong",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "markup.underline",
+        "settings": {
+          "fontStyle": "underline"
+        }
+      },
+      {
+        "scope": "markup.bold",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "markup.heading",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "markup.italic",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "storage.type",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "storage.modifier",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "String interpolation",
+        "scope": [
+          "punctuation.definition.template-expression.begin",
+          "punctuation.definition.template-expression.end",
+          "punctuation.section.embedded"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.control",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator.new",
+          "keyword.operator.expression",
+          "keyword.operator.cast",
+          "keyword.operator.sizeof",
+          "keyword.operator.logical.python"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "this.self",
+        "scope": "variable.language",
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#ff5874"
+        }
+      },
+      {
+        "name": "@Decorator",
+        "scope": ["meta.decorator punctuation.decorator"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["punctuation.definition.comment", "comment"],
+        "settings": {
+          // "foreground": "#ff5874",
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.colorCustomizations": {
+    "[Material Theme Darker High Contrast]": {
+      "activityBarBadge.background": "#FFA000",
+      "activityBar.activeBorder": "#FFA000",
+      "list.activeSelectionForeground": "#FFA000",
+      "list.inactiveSelectionForeground": "#FFA000",
+      "list.highlightForeground": "#FFA000",
+      "scrollbarSlider.activeBackground": "#FFA00050",
+      "editorSuggestWidget.highlightForeground": "#FFA000",
+      "textLink.foreground": "#FFA000",
+      "progressBar.background": "#FFA000",
+      "pickerGroup.foreground": "#FFA000",
+      "tab.activeBorder": "#FFA000",
+      "notificationLink.foreground": "#FFA000",
+      "editorWidget.resizeBorder": "#FFA000",
+      "editorWidget.border": "#FFA000",
+      "settings.modifiedItemIndicator": "#FFA000",
+      "settings.headerForeground": "#FFA000",
+      "panelTitle.activeBorder": "#FFA000",
+      "breadcrumb.activeSelectionForeground": "#FFA000",
+      "menu.selectionForeground": "#FFA000",
+      "menubar.selectionForeground": "#FFA000",
+      "editor.findMatchBorder": "#FFA000",
+      "selection.background": "#FFA00040",
+      "statusBarItem.remoteBackground": "#FFA000"
+    }
+  },
+  "materialTheme.accent": "Yellow"
+}

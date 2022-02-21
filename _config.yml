@@ -20,42 +20,47 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : 李道玲 CAMELLIA DAO-LING 李道玲
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  I am a channel for healing
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: en # the language of your site, default as "en"
+timezone: America/Los_Angeles # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Camellis Dao-Ling
   url       :
   avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
+  bio       : I am a channel for healing.
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  twitter   : camelliadlee # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  linkedin  : camelliadlee # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+  instagram : _wholesoul # "user_name" the last part of your profile url, e.g. https://www.instagram.com/user_name
+  youtube   : UCTOO3pdnYzNO2gyJDRxCfrg # "user_name" the last part of your profile url, e.g. https://www.youtube.com/channel/user_channel
+  vimeo     : wholesoul # "user_name" the last part of your profile url, e.g. https://www.vimeo.com/user_name
+  pinterest : wholesoulcamellia # "user_name" the last part of your profile url, e.g. https://www.pinterest.com/user_name
+  patreon   : wholesoul # "user_name" the last part of your profile url, e.g. https://www.patreon.com/user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: camelliadaoling/camelliadaoling.github.io
 repository_tree: master
 
 
@@ -183,9 +188,9 @@ markdown    : kramdown
 highlighter : rouge
 permalink   : date
 
+include:
+  - _pages
 exclude:
-  - CHANGELOG.md
-  - HOW_TO_RELEASE.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -195,10 +200,7 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
   - /node_modules
-  - /screenshots
-  - /test
   - /vendor
 
 defaults:
@@ -219,7 +221,16 @@ defaults:
 ## => Plugins
 ##############################
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jemoji
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache

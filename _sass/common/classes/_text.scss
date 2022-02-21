@@ -25,7 +25,11 @@
     color: $text-color-theme-dark-l;
   }
   a:not(.button) {
-    @include link-colors($text-color-theme-dark, $main-color-1);
+    @include link-colors(
+      $text-color-theme-dark-d,
+      darken($text-color-theme-dark-d, 20%),
+      darken($text-color-theme-dark-d, 20%)
+    );
   }
 }
 
@@ -34,4 +38,35 @@
 }
 .text--dark {
   @include text-dark();
+}
+
+@media screen and (min-width: 0) and (max-width: calc(1512px - 1px)) and (orientation: landscape) {
+  .text-l {
+    font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+  }
+}
+@media screen and (min-width: 0) and (max-width: calc(1512px - 1px)) and (orientation: portrait) {
+  .text-l {
+    font-size: calc((1.6 - 1) * 1.2vh + 1rem);
+  }
+}
+@media screen and (min-width: 1512px) {
+  .text-l {
+    font-size: calc(1.6 * 1rem);
+  }
+}
+@media screen and (min-width: 0) and (max-width: calc(1512px - 1px)) and (orientation: landscape) {
+  .text-sm {
+    font-size: calc((1 - 1) * 1.2vw + 1rem);
+  }
+}
+@media screen and (min-width: 0) and (max-width: calc(1512px - 1px)) and (orientation: portrait) {
+  .text-sm {
+    font-size: calc((1 - 1) * 1.2vh + 1rem);
+  }
+}
+@media screen and (min-width: 1512px) {
+  .text-sm {
+    font-size: calc(1 * 1rem);
+  }
 }

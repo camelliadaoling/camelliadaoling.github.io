@@ -35,10 +35,10 @@
   @if $hover-clr == default {
     @if $hover-bg-clr == null {
       @if $theme == "light" {
-        $hover-clr: darken($clr, 14%);
+        $hover-clr: lighten($clr, 14%);
       }
       @if $theme == "dark" {
-        $hover-clr: lighten($clr, 18%);
+        $hover-clr: darken($clr, 18%);
       }
     } @else if $hover-bg-clr == default {
       $hover-clr: $clr;
@@ -103,6 +103,10 @@
   }
   @include hover() {
     color: $hover-clr;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0 solid $hover-clr;
+    border-bottom-width: 2px;
     @if $hover-bg-clr {
       background-color: $hover-bg-clr;
     }

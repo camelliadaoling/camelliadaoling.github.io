@@ -7,12 +7,10 @@
   @include align-items(center);
   color: $footer-text-color;
   background: $footer-background;
-  a {
-    @include link-colors ($footer-text-color, $main-color-1);
-  }
+  min-height: 28vh;
   .site-info {
     font-size: map-get($base, font-size-xs);
-    text-align: center;
+    text-align: left;
     .menu {
       line-height: map-get($base, line-height-xs);
       & > * {
@@ -23,6 +21,9 @@
         }
       }
     }
+  }
+  .main {
+    min-height: 23vh;
   }
 }
 .footer__author-links {

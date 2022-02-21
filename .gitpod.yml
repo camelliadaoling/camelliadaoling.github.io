@@ -1,7 +1,7 @@
 tasks:
   - name: Dev Server
-    init: bundle
-    command: bundle exec jekyll serve --livereload
+    init: npm i
+    command: bundle && bundle exec jekyll serve --livereload
 vscode:
   extensions:
     - eamodio.gitlens
