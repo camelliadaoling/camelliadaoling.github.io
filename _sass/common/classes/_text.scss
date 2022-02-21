@@ -10,7 +10,11 @@
     color: $text-color-theme-light-l;
   }
   a:not(.button) {
-    @include link-colors($text-color-theme-light, $main-color-1);
+    @include link-colors(
+      $text-color-theme-light-d,
+      lighten($text-color-theme-light-d, 20%),
+      lighten($text-color-theme-light-d, 20%)
+    );
   }
 }
 @mixin text-dark {

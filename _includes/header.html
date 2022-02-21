@@ -17,7 +17,7 @@
       </div>
       <div class="main_menu">
         <div class="social">
-          {%- include author-links.html theme="dark" author=site.author -%}
+          {%- include author-links.html theme=include.theme author=site.author -%}
         </div>
         {%- if site.data.navigation.header -%}
         <nav class="navigation">
